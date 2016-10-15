@@ -26,6 +26,8 @@ app.use(async (ctx, next) => {
       ctx.body = 'Not Found'
     }
   })
+
+  await next()
 })
 
 function renderPage(appHtml) {
